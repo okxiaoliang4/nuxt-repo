@@ -1,6 +1,6 @@
-import { dynamicEventHandler, sendRedirect } from "h3";
+import { defineEventHandler, sendRedirect } from "h3";
 
-export default dynamicEventHandler(async (event) => {
+export default defineEventHandler(async (event) => {
   await new Promise((resolve, reject) => {
     setTimeout(resolve, 1000);
   });
